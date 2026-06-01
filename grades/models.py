@@ -13,5 +13,11 @@ class Student(models.Model):
 
         if p >= 90:
             return "A"
-        return "F"
-    
+        elif p >= 80:
+            return "B"
+        elif p >= 70:
+            return "C"
+        elif p >= 60:
+            return "D"
+        else:
+            return "F"
