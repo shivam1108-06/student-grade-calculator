@@ -14,3 +14,4 @@ class Student(models.Model):
         if p >= 90:
             return "A"
         return "F"
+    
