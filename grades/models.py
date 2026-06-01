@@ -1,6 +1,5 @@
 from django.db import models
 
-# Create your models here.
 class Student(models.Model):
     name = models.CharField(max_length=100)
     obtained_marks = models.IntegerField()
@@ -8,16 +7,10 @@ class Student(models.Model):
 
     def percentage(self):
         return (self.obtained_marks / self.total_marks) * 100
-    
+
     def grade(self):
         p = self.percentage()
 
         if p >= 90:
-            return 'A'
-        elif p >= 80:   
-            return 'B'
-        elif p >= 70:
-            return 'C'
-        elif p >= 60:
-            return 'D'
-        return 'F'     
+            return "A"
+        return "F"
